@@ -55,7 +55,9 @@ ROOT_URLCONF = 'TIC_BCN_APC.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'  # Per carregar el index.html  
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

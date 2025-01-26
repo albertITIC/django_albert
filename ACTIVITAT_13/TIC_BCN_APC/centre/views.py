@@ -48,11 +48,9 @@ def professor(request):
         'correu':professor["email"],
         'curs':professor["curse"],
         'moduls':professor["modules"]
-        
         })
     
     return HttpResponse(dades)
-
 
 # Versió resumida
 # def index(request):

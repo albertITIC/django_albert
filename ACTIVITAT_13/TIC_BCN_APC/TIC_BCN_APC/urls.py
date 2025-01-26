@@ -23,6 +23,8 @@ from centre import views
 # ]
 
 urlpatterns = [
-    path('', views.index, name='index'),    
+    # Modificar el path
+    path('centre/students', views.alumne, name='alumnes'),    
+    path('centre/teachers', views.professor, name='professors'),    
     path('admin/', admin.site.urls)
 ]

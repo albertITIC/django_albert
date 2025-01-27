@@ -15,7 +15,7 @@ def alumne(request):
         "modules":"M6, M7, M8, M9" 
     }
     
-    template = loader.get_template('index_centre.html')
+    template = loader.get_template('alumnes_centre.html')
     
     dades = template.render({
         'nom':alumne["name"],
@@ -30,15 +30,23 @@ def alumne(request):
 
 # Per professors
 def professor(request):
-    professor = {
+    professor = [{
         "name":"Roger",
         "surname1":"Sobrino",
         "surname2":"Gil", 
         "email":"roger@gmail.com", 
         "curse":"DAW2A", 
         "modules":"M6, M13" 
-    }
-   
+    }, 
+    {
+        "name": "Laura",
+        "surname1": "Gómez",
+        "surname2": "López",
+        "email": "laura.gomez@gmail.com",
+        "department": "Matemàtiques",
+        "subjects": ["Àlgebra", "Càlcul"]
+    }]
+    
     template = loader.get_template('professors_centre.html')
     
     dades = template.render({
@@ -56,3 +64,9 @@ def professor(request):
 # def index(request):
 #     alumne = {{"name":"Albert", "surname":"Penades", "age":21}}
 #     return render(request, 'index_centre.html', {"name":alumne["name"], "surname":alumne["surname"], "age":alumne["age"]})
+
+
+
+# def students(request):
+#     template = loader.get_template('index_centre.html')
+#     return HttpResponse(template.render())

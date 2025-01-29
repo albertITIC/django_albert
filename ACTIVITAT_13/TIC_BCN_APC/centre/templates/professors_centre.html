@@ -1,64 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
+{% include "head/header.html" %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dades del professorat</title>
+    <title>Professorat</title>
 </head>
-<body>
+<body>    
     <h1>INFORMACIÓ PROFESSORAT TIC BARCELONA</h1>
-    {% comment %} Ejemplo 1 {% endcomment %}
-    <div>
-        <label> <strong>Nom:</strong> </label> {{nom}}
-    </div>
-
-    <div>
-        <label> <strong>Primer cognom: </strong></label> {{cognom1}}
-    </div>    
+    <div><label> <strong>Nom:</strong> </label> {{nom}}</div>
+    <div><label> <strong>Primer cognom: </strong></label> {{cognom1}}</div>    
+    <div><label><strong>Segon cognom:</strong></label> {{cognom2}}</div>
+    <div><label><strong>Correu:</strong></label> {{correu}}</div>
+    <div><label><strong>Curs:</strong></label> {{curs}}</div>    
+    <div><label><strong>Móduls:</strong></label> {{moduls}}</div>
     
-    <div>
-        <label><strong>Segon cognom:</strong></label> {{cognom2}}
-    </div>
-
-    <div>
-        <label><strong>Correu:</strong></label> {{correu}}
-    </div>
-
-    <div>
-        <label><strong>Curs:</strong></label> {{curs}}
-    </div>    
-        
-    <div>
-        <label><strong>Móduls:</strong></label> {{moduls}}
-    </div>
-
-    
-    {% comment %} Ejemplo 2 {% endcomment %}
-    <div>
-        <label> <strong>Nom:</strong> </label> {{nom}}
-    </div>
-
-    <div>
-        <label> <strong>Primer cognom: </strong></label> {{cognom1}}
-    </div>    
-    
-    <div>
-        <label><strong>Segon cognom:</strong></label> {{cognom2}}
-    </div>
-
-    <div>
-        <label><strong>Correu:</strong></label> {{correu}}
-    </div>
-
-    <div>
-        <label><strong>Curs:</strong></label> {{curs}}
-    </div>    
-        
-    <div>
-        <label><strong>Móduls:</strong></label> {{moduls}}
-    </div>
-
-
-
 </body>
-</html>
+{% endblock %}

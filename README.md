@@ -9,10 +9,10 @@
 
 ## Punt 1.2 (millorat i amb header)
 ### Informació alumnat
-![Html millorat + Header afegit](image-2.png)
+![Html millorat + Header afegit](image-4.png)
 
 ### Informació professorat
-![Html millorat + header afegit](image-3.png)
+![Html millorat + Header afegit](image-2.png)
 
 
 ## Punt 2

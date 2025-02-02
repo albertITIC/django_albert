@@ -1,0 +1,36 @@
+{% include "head/header.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnat</title>
+</head>
+<body>
+    <h1>INFORMACIÓ ALUMNAT TIC BARCELONA</h1>    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Primer Cognom</th>
+                <th>Segon Cognom</th>
+                <th>Correu</th>
+                <th>Curs</th>
+                <th>Mòduls</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for alumne in alumnes %}
+            <tr>
+                <td>{{ alumne.name }}</td>
+                <td>{{ alumne.surname1 }}</td>
+                <td>{{ alumne.surname2 }}</td>
+                <td>{{ alumne.email }}</td>
+                <td>{{ alumne.curse }}</td>
+                <td>{{ alumne.modules }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+{% endblock %}

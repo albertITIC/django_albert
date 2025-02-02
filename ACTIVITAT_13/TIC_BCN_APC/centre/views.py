@@ -77,3 +77,32 @@ def professor(request):
     dades2 = template.render({'professors':professors})
 
     return HttpResponse(dades2)
+
+
+def info_alumnat(request):
+      
+    info_alumnat = [
+        {
+            "name":"1", "nom":"exemple", "email":"jordi@gmail.com", "curse":"DAW2A", "modules":"M03"
+        }
+    ]  
+    
+    template = loader.get_template('llibres.html')    
+
+    info_alumnat = template.render({'info_alumnat': info_alumnat})
+
+    return HttpResponse(info_alumnat)
+
+
+def info_professor(request):
+    info_prof = [
+        {
+            "name":"1", "nom":"exemple", "email":"jordi@gmail.com", "curse":"DAW2A", "modules":"M03"
+        }
+    ]  
+    
+    template = loader.get_template('infoAlumnat.html')    
+
+    info_alumnat = template.render({'info_alumnat': info_alumnat})
+
+    return HttpResponse(info_alumnat)

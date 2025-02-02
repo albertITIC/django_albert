@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professorat</title>
 </head>
-<body>    
-    <h1>INFORMACIÓ PROFESSORAT TIC BARCELONA</h1>
-    <div><label> <strong>Nom:</strong> </label> {{nom}}</div>
-    <div><label> <strong>Primer cognom: </strong></label> {{cognom1}}</div>    
-    <div><label><strong>Segon cognom:</strong></label> {{cognom2}}</div>
-    <div><label><strong>Correu:</strong></label> {{correu}}</div>
-    <div><label><strong>Curs:</strong></label> {{curs}}</div>    
-    <div><label><strong>Móduls:</strong></label> {{moduls}}</div>
+<body>
+    <h1>INFORMACIÓ PROFESSORAT TIC BARCELONA</h1>    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Primer Cognom</th>
+                <th>Correu</th>
+                <th>Curs</th>
+                <th>Mòduls</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for professor in professors %}
+            <tr>
+                <td>{{ professor.name}}</td>
+                <td>{{ professor.surname1}}</td>
+                <td>{{ professor.email}}</td>
+                <td>{{ professor.curse}}</td>
+                <td>{{ professor.modules}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     
 </body>
 {% endblock %}

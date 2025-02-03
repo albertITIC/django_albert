@@ -4,9 +4,11 @@ from . import views
 
 
 urlpatterns = [
+    path('index/', views.index, name='index'),
     # Modificar el path
     path('students/', views.alumne, name='alumnes'),    
     path('teachers/', views.professor, name='professors'),
-    path('info_alumnat/', views.info_alumnat, name='info_alumnat')
-    
+    # Mostrar alumnes 
+    path('alumnes/', views.llistat_alumnes, name='llistat_alumnes'),
+    path('alumnes/<int:id>/', views.detall_alumne, name='detall_alumne')
 ]

@@ -1,4 +1,27 @@
-{% include "header/header.html" %}
-
+{% include "head/header.html" %}
 {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo</title>
+</head>
+<body>
+    <h1>Index html</h1>    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for text in texts %}
+            <tr>
+                <td>{{text.text1}}</td>
+                <td>{{text.text2}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
 {% endblock %}

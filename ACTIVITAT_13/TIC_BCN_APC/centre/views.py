@@ -4,6 +4,12 @@ from django.template import loader # Importem el template
 
 
 # Create your views here.
+def index(request):
+    texts = [{"text1": "Hola","text2":"mundo"}]
+    template = loader.get_template('index.html')
+    dades = template.render({'texts': texts})
+        
+    return HttpResponse(dades)
 
 def alumne(request):
     alumnes = [
@@ -79,30 +85,44 @@ def professor(request):
     return HttpResponse(dades2)
 
 
-def info_alumnat(request):
-      
-    info_alumnat = [
-        {
-            "name":"1", "nom":"exemple", "email":"jordi@gmail.com", "curse":"DAW2A", "modules":"M03"
-        }
-    ]  
+# Apartat 2
+def llistat_alumnes(request):
+   llista_alumnes = [
+        {"id": "1", "name": "Albert", "surname1": "Penadés", "surname2": "Casajús", "email": "2023_albert.penades@iticbcn.cat", "curse": "DAW2A", "modules": "M6, M7, M8, ML"},
+        {"id": "2", "name": "Víctor A.", "surname1": "Fernández", "surname2": "Álvarez", "email": "2023_victor.fernandez@iticbcn.cat", "curse": "DAW2A", "modules": "M06, M07, M08, IA"},
+        {"id": "3", "name": "Milena", "surname1": "Vardumyan", "surname2": "Aleksanyan", "email": "2023_milena.vardumyan@iticbcn.cat", "curse": "DAW2A", "modules": "M06, M07, M013, Big Data"},    
+    ]
+   
+   template = loader.get_template('infoAlumnat.html')
     
-    template = loader.get_template('llibres.html')    
-
-    info_alumnat = template.render({'info_alumnat': info_alumnat})
-
-    return HttpResponse(info_alumnat)
-
-
-def info_professor(request):
-    info_prof = [
-        {
-            "name":"1", "nom":"exemple", "email":"jordi@gmail.com", "curse":"DAW2A", "modules":"M03"
-        }
-    ]  
+   dades = template.render({"llista_alumnes": llista_alumnes})
     
-    template = loader.get_template('infoAlumnat.html')    
+   return HttpResponse(dades)
 
-    info_alumnat = template.render({'info_alumnat': info_alumnat})
+def detall_alumne(request, id):
+    alumne_Obj = None
+    llista_alumnes = [
+        {"id": "1", "name": "Albert", "surname1": "Penadés", "surname2": "Casajús", "email": "2023_albert.penades@iticbcn.cat"},
+        {"id": "2", "name": "Víctor A.", "surname1": "Fernández", "surname2": "Álvarez", "email": "2023_victor.fernandez@iticbcn.cat"},
+        {"id": "3", "name": "Milena", "surname1": "Vardumyan", "surname2": "Aleksanyan", "email": "2023_milena.vardumyan@iticbcn.cat"}
+    ]
+    
+    template = loader.get_template('infoAlumnat.html') # Mirar-ho
+    
+    dades = template.render({"llista_alumnes": llista_alumnes})
+    
+    return HttpResponse(dades)
+    
+    
+# def info_professor(request):
+#     info_prof = [
+#         {
+#             "name":"1", "nom":"exemple", "email":"jordi@gmail.com", "curse":"DAW2A", "modules":"M03"
+#         }
+#     ]  
+    
+#     template = loader.get_template('infoAlumnat.html')    
 
-    return HttpResponse(info_alumnat)
+#     info_alumnat = template.render({'info_alumnat': info_alumnat})
+
+#     return HttpResponse(info_alumnat)

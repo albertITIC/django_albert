@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alumnat</title>
+    <title>Detall Alumne</title>
 </head>
 <body>
-    <h1>INFORMACIÓ ALUMNAT TIC BARCELONA</h1>    
+    <h1>DETALL DE L'ALUMNE</h1>  
+    
+
     <table border="1">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Nom</th>
                 <th>Primer Cognom</th>
                 <th>Segon Cognom</th>
@@ -19,8 +22,8 @@
             </tr>
         </thead>
         <tbody>
-            {% for alumne in alumnes %}
             <tr>
+                <td>{{ alumne.id }}</td>
                 <td>{{ alumne.name }}</td>
                 <td>{{ alumne.surname1 }}</td>
                 <td>{{ alumne.surname2 }}</td>
@@ -28,9 +31,10 @@
                 <td>{{ alumne.curse }}</td>
                 <td>{{ alumne.modules }}</td>
             </tr>
-            {% endfor %}
         </tbody>
     </table>
-    
+
+    <br>
+    <a href="{% url 'llistat_alumnes' %}">Tornar al llistat</a>
 </body>
 {% endblock %}

@@ -57,7 +57,5 @@ Aquest seria el resultat de la distribució de l'activitat 14:
 ![Directoris.png](img_10.png)
 
 ### · Creació del fitxer Docker (docker.compose.yml)
-
-
-#### 
+#### - Error - 
 ![Error](image-7.png)

@@ -99,19 +99,15 @@ def llistat_alumnes(request):
     
    return HttpResponse(dades)
 
-def detall_alumne(request, id):
-    alumne_Obj = None
-    llista_alumnes = [
-        {"id": "1", "name": "Albert", "surname1": "Penadés", "surname2": "Casajús", "email": "2023_albert.penades@iticbcn.cat"},
-        {"id": "2", "name": "Víctor A.", "surname1": "Fernández", "surname2": "Álvarez", "email": "2023_victor.fernandez@iticbcn.cat"},
-        {"id": "3", "name": "Milena", "surname1": "Vardumyan", "surname2": "Aleksanyan", "email": "2023_milena.vardumyan@iticbcn.cat"}
-    ]
+# def detall_alumne(request, id):
+#     alumne_Obj = None
+#     for i in 
     
-    template = loader.get_template('infoAlumnat.html') # Mirar-ho
+#     template = loader.get_template('infoAlumnat.html') # Mirar-ho
     
-    dades = template.render({"llista_alumnes": llista_alumnes})
+#     dades = template.render({"llista_alumnes": llista_alumnes})
     
-    return HttpResponse(dades)
+#     return HttpResponse(dades)
     
     
 # def info_professor(request):
@@ -120,9 +116,7 @@ def detall_alumne(request, id):
 #             "name":"1", "nom":"exemple", "email":"jordi@gmail.com", "curse":"DAW2A", "modules":"M03"
 #         }
 #     ]  
-    
+   
 #     template = loader.get_template('infoAlumnat.html')    
-
 #     info_alumnat = template.render({'info_alumnat': info_alumnat})
-
 #     return HttpResponse(info_alumnat)
